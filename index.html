@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>S.K. Makeover Beauty Salon & Academy | Ranchi</title>
+
+<!-- SOCIAL SHARE -->
+<meta property="og:title" content="S.K. Makeover Beauty Salon & Academy">
+<meta property="og:description" content="Luxury Makeup • Hair • Skin • Bridal Studio | Ranchi">
+<meta property="og:image" content="logo.png">
+<meta property="og:url" content="https://terasynctech.github.io/sk-makeover/">
+
+<link rel="icon" href="logo.png">
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#0b0b0f;
+color:white;
+overflow-x:hidden;
+}
+
+/* HERO SLIDER */
+
+.hero{
+position:relative;
+height:100vh;
+overflow:hidden;
+}
+
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+background-size:cover;
+background-position:center;
+opacity:0;
+animation:slider 16s infinite;
+transform:scale(1.1);
+}
+
+.slide:nth-child(1){
+background:url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1400') center/cover;
+animation-delay:0s;
+}
+
+.slide:nth-child(2){
+background:url('https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=1400') center/cover;
+animation-delay:4s;
+}
+
+.slide:nth-child(3){
+background:url('https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=1400') center/cover;
+animation-delay:8s;
+}
+
+.slide:nth-child(4){
+background:url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1400') center/cover;
+animation-delay:12s;
+}
+
+@keyframes slider{
+0%{opacity:0;transform:scale(1.1);}
+8%{opacity:1;}
+25%{opacity:1;transform:scale(1);}
+33%{opacity:0;}
+100%{opacity:0;}
+}
+
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.85));
+z-index:1;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+height:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+animation:fadeUp 1.2s ease;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.logo{
+width:110px;
+height:110px;
+border-radius:50%;
+object-fit:cover;
+border:4px solid rgba(255,255,255,0.3);
+margin-bottom:20px;
+backdrop-filter:blur(10px);
+box-shadow:0 0 30px rgba(255,0,153,0.5);
+animation:float 3s infinite ease-in-out;
+}
+
+@keyframes float{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-10px);}
+100%{transform:translateY(0px);}
+}
+
+.hero h1{
+font-size:42px;
+font-weight:700;
+line-height:1.2;
+background:linear-gradient(90deg,#ff4da6,#ff9ad5);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+margin-top:15px;
+font-size:16px;
+color:#f1f1f1;
+max-width:700px;
+}
+
+.badge{
+margin-top:15px;
+padding:8px 18px;
+border-radius:50px;
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(10px);
+font-size:14px;
+color:#fff;
+border:1px solid rgba(255,255,255,0.2);
+}
+
+/* BUTTONS */
+
+.buttons{
+margin-top:30px;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.btn{
+padding:14px 26px;
+border-radius:50px;
+text-decoration:none;
+color:white;
+font-weight:600;
+background:linear-gradient(90deg,#ff0080,#ff4da6);
+box-shadow:0 8px 25px rgba(255,0,128,0.35);
+transition:0.4s;
+position:relative;
+overflow:hidden;
+}
+
+.btn:hover{
+transform:translateY(-5px) scale(1.05);
+box-shadow:0 10px 30px rgba(255,0,128,0.5);
+}
+
+/* SECTION */
+
+.section{
+padding:80px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.section-title{
+text-align:center;
+font-size:34px;
+margin-bottom:50px;
+color:#ff5db1;
+}
+
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:rgba(255,255,255,0.06);
+border:1px solid rgba(255,255,255,0.08);
+padding:30px;
+border-radius:25px;
+backdrop-filter:blur(12px);
+transition:0.4s;
+position:relative;
+overflow:hidden;
+}
+
+.card::before{
+content:'';
+position:absolute;
+width:120px;
+height:120px;
+background:rgba(255,0,128,0.15);
+border-radius:50%;
+top:-40px;
+right:-40px;
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:rgba(255,255,255,0.09);
+}
+
+.card h3{
+margin-top:15px;
+font-size:22px;
+color:#ff89c7;
+}
+
+.card p{
+margin-top:10px;
+color:#ddd;
+font-size:14px;
+line-height:1.7;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:25px;
+transition:0.5s;
+box-shadow:0 10px 25px rgba(0,0,0,0.35);
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* PRICE BOX */
+
+.price-box{
+background:linear-gradient(135deg,#1d1d26,#101014);
+padding:35px;
+border-radius:30px;
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.price-list{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+margin-top:25px;
+}
+
+.price-item{
+background:rgba(255,255,255,0.05);
+padding:18px;
+border-radius:18px;
+display:flex;
+justify-content:space-between;
+font-size:15px;
+}
+
+.price-item span{
+color:#ff72bb;
+font-weight:700;
+}
+
+/* FOOTER */
+
+.footer{
+padding:50px 20px;
+text-align:center;
+background:#07070a;
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.footer h2{
+color:#ff5db1;
+margin-bottom:10px;
+}
+
+.footer p{
+color:#ccc;
+margin:6px 0;
+}
+
+.socials{
+margin-top:20px;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.socials a{
+text-decoration:none;
+color:white;
+padding:12px 18px;
+border-radius:50px;
+background:rgba(255,255,255,0.08);
+transition:0.3s;
+}
+
+.socials a:hover{
+background:#ff0080;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:30px;
+}
+
+.section-title{
+font-size:28px;
+}
+
+.price-list{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="slide"></div>
+<div class="slide"></div>
+<div class="slide"></div>
+<div class="slide"></div>
+
+<div class="overlay"></div>
+
+<div class="hero-content">
+
+<img src="logo.png" class="logo">
+
+<h1>S.K. Makeover <br> Beauty Salon & Academy</h1>
+
+<p>
+Luxury Bridal Makeup • Hair Styling • Skin Care • Professional Beauty Training
+</p>
+
+<div class="badge">
+✨ Trending Beauty Studio in Ranchi
+</div>
+
+<div class="buttons">
+<a href="tel:+917004133597" class="btn">📞 Call Now</a>
+<a href="https://wa.me/917004133597" class="btn">💬 WhatsApp</a>
+<a href="#services" class="btn">✨ Explore Services</a>
+</div>
+
+</div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+
+<h2 class="section-title">💄 Premium Beauty Services</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>👰 Bridal Makeup</h3>
+<p>
+HD Bridal Makeup, Engagement, Reception, Mehndi & Haldi Looks with premium finishing.
+</p>
+</div>
+
+<div class="card">
+<h3>💇 Hair Styling</h3>
+<p>
+Hair Spa, Hair Straightening, Highlights, Multi-Step Cuts & Trendy Styling.
+</p>
+</div>
+
+<div class="card">
+<h3>✨ Facial & Skin</h3>
+<p>
+Gold Facial, Diamond Facial, Lotus Facial & Advanced Skin Care Treatments.
+</p>
+</div>
+
+<div class="card">
+<h3>🎓 Beauty Academy</h3>
+<p>
+Professional Makeup & Beauty Training for students who want salon careers.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+<section class="section">
+
+<h2 class="section-title">📸 Trending Makeover Gallery</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1487412912498-0447578fcca8?q=80&w=1200">
+<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200">
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1200">
+<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200">
+
+</div>
+
+</section>
+
+<!-- PRICE -->
+<section class="section">
+
+<div class="price-box">
+
+<h2 class="section-title">💰 Makeup Packages</h2>
+
+<div class="price-list">
+
+<div class="price-item">
+Party Makeup
+<span>₹2500</span>
+</div>
+
+<div class="price-item">
+Engagement Makeup
+<span>₹5000</span>
+</div>
+
+<div class="price-item">
+Bridal Makeup
+<span>₹7000</span>
+</div>
+
+<div class="price-item">
+Reception Makeup
+<span>₹8000</span>
+</div>
+
+<div class="price-item">
+Haldi Makeup
+<span>₹3000</span>
+</div>
+
+<div class="price-item">
+Mehndi Makeup
+<span>₹2000</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+<h2>S.K. Makeover Beauty Salon & Academy</h2>
+
+<p>📍 Ranchi, Jharkhand</p>
+
+<p>📞 +91 7004133597 | +91 9279844306</p>
+
+<p>✨ Makeup • Hair • Skin • Academy</p>
+
+<div class="socials">
+<a href="tel:+917004133597">Call</a>
+<a href="https://wa.me/917004133597">WhatsApp</a>
+<a href="#">Instagram</a>
+</div>
+
+<p style="margin-top:25px;color:#777;">
+Powered by TeraSyncTech 🚀
+</p>
+
+</footer>
+
+</body>
+</html>
